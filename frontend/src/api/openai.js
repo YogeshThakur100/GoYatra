@@ -3,6 +3,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const getFamousPlaces = async (inputs) => {
     try {
+        const apiKey = process.env.REACT_APP_API_KEY;
+        console.log(apiKey);
         const genAI = new GoogleGenerativeAI("AIzaSyBVoIAKa5G7btXxN4GiOWFW1RzwURpmrn4");
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         
